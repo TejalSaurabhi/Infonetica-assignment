@@ -1,0 +1,25 @@
+{
+  "id": "__DEF__",
+  "name": "Onboarding",
+  "states": [
+    { "id": "__ST_START__",  "name": "Draft",    "isInitial": true,  "isFinal": false, "enabled": true  },
+    { "id": "__ST_REVIEW__", "name": "Review",   "isInitial": false, "isFinal": false, "enabled": true  },
+    { "id": "__ST_DONE__",   "name": "Approved", "isInitial": false, "isFinal": true,  "enabled": true  }
+  ],
+  "actions": [
+    {
+      "id": "__ACT_SUBMIT__",
+      "name": "SubmitForReview",
+      "enabled": true,
+      "fromStates": ["__ST_START__"],
+      "toState": "__ST_REVIEW__"
+    },
+    {
+      "id": "__ACT_APPROVE__",
+      "name": "Approve",
+      "enabled": true,
+      "fromStates": ["__ST_REVIEW__"],
+      "toState": "__ST_DONE__"
+    }
+  ]
+}

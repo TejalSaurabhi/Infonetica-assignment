@@ -1,0 +1,25 @@
+{
+  "id": "84229CE4-FA74-4E20-8E77-C826699E87DE",
+  "name": "Onboarding",
+  "states": [
+    { "id": "0D0D6B7A-1EC8-4934-B626-02948D12EC62",  "name": "Draft",    "isInitial": true,  "isFinal": false, "enabled": true  },
+    { "id": "EB824E8D-7F5C-4CA6-BBFD-6BFF1387AF35", "name": "Review",   "isInitial": false, "isFinal": false, "enabled": true  },
+    { "id": "61F60CB1-8F4E-4D97-8523-EF5E16EEFB99",   "name": "Approved", "isInitial": false, "isFinal": true,  "enabled": true  }
+  ],
+  "actions": [
+    {
+      "id": "B62E216D-EB03-4138-93D1-FE8D7DBD5E4B",
+      "name": "SubmitForReview",
+      "enabled": true,
+      "fromStates": ["0D0D6B7A-1EC8-4934-B626-02948D12EC62"],
+      "toState": "EB824E8D-7F5C-4CA6-BBFD-6BFF1387AF35"
+    },
+    {
+      "id": "1EA6B52B-D325-461A-B6E9-A5AFAE13656D",
+      "name": "Approve",
+      "enabled": true,
+      "fromStates": ["EB824E8D-7F5C-4CA6-BBFD-6BFF1387AF35"],
+      "toState": "61F60CB1-8F4E-4D97-8523-EF5E16EEFB99"
+    }
+  ]
+}
